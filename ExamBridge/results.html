@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamBridge - Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="1000053634.png" alt="ExamBridge Logo" style="height: 85px;">
+        </a>
+        <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="logout-item"><a href="signin.html" class="btn btn-outline logout-btn"
+                    style="padding: 0.4rem 1rem; margin-top: -0.4rem;">Login</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>Evaluation Results</h2>
+            <p>View priority and status of uploaded materials and expected tasks.</p>
+        </div>
+
+        <div class="table-container">
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>Subject/Topic</th>
+                        <th>Relevance</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: var(--priority-high);">
+                        <td><strong>Data Structures & Algorithms</strong></td>
+                        <td><strong>Both (GATE & College)</strong></td>
+                        <td>Evaluated</td>
+                        <td><a href="resources.html" style="color:var(--primary-navy)"><i
+                                    class="fa-solid fa-arrow-right"></i> View</a></td>
+                    </tr>
+                    <tr style="background-color: var(--priority-medium);">
+                        <td><strong>Engineering Mathematics</strong></td>
+                        <td><strong>GATE Only</strong></td>
+                        <td>Pending</td>
+                        <td><a href="resources.html" style="color:var(--primary-navy)"><i
+                                    class="fa-solid fa-arrow-right"></i> View</a></td>
+                    </tr>
+                    <tr style="background-color: var(--priority-low);">
+                        <td><strong>Software Engineering</strong></td>
+                        <td><strong>College Only</strong></td>
+                        <td>Action Needed</td>
+                        <td><a href="resources.html" style="color:var(--primary-navy)"><i
+                                    class="fa-solid fa-arrow-right"></i> View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div style="text-align: center; margin-top: 2rem;">
+            <button id="download-plan-btn" class="btn"
+                style="padding: 1rem 2rem; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);">
+                <i class="fa-solid fa-download" style="margin-right: 8px;"></i> Download Personalized Study Plan
+            </button>
+        </div>
+
+        <div class="topic-of-day"
+            style="margin-top: 3rem; background: var(--bg-white); border-radius: var(--border-radius); padding: 2rem; box-shadow: var(--box-shadow); text-align: center; border: 2px solid var(--primary-green);">
+            <h3 style="color: var(--primary-navy); margin-bottom: 1rem;"><i class="fa-solid fa-star"
+                    style="color: #f1c40f;"></i> Topic of the Day</h3>
+            <p style="margin-bottom: 1.5rem; font-size: 1.1rem;"><strong>Operating Systems: Memory Management</strong>
+            </p>
+            <p style="margin-bottom: 1.5rem; color: #555;">Master the core concepts of paging, segmentation, and virtual
+                memory. This topic is highly relevant for both GATE and College exams.</p>
+            <a href="resources.html" class="btn">Go to Resources <i class="fa-solid fa-arrow-right"
+                    style="margin-left: 5px;"></i></a>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

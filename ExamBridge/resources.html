@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamBridge - Resources</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="1000053634.png" alt="ExamBridge Logo" style="height: 85px;">
+        </a>
+        <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="logout-item"><a href="signin.html" class="btn btn-outline logout-btn"
+                    style="padding: 0.4rem 1rem; margin-top: -0.4rem;">Login</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>Study Resources</h2>
+            <p>Access our curated collection of materials to help you succeed.</p>
+        </div>
+
+        <div class="resources-grid">
+            <div class="resource-card">
+                <div class="resource-icon" style="height: 80px; font-size: 2.5rem;">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>OS: Memory Management</h3>
+                    <div style="margin: 1rem 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <a href="https://youtube.com" target="_blank" class="resource-link"><i
+                                class="fa-brands fa-youtube" style="color: #ff0000; font-size: 1.2rem;"></i> Watch
+                            Lecture</a>
+                        <a href="#" class="resource-link"><i class="fa-solid fa-file-pdf"
+                                style="color: var(--primary-navy); font-size: 1.2rem;"></i> Download Notes</a>
+                        <a href="#" class="resource-link"><i class="fa-solid fa-file-circle-question"
+                                style="color: var(--primary-green); font-size: 1.2rem;"></i> View PYQs</a>
+                    </div>
+                    <button class="btn btn-done" data-topic="OS: Memory Management"
+                        style="width: 100%; margin-top: auto;">I am Done</button>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-icon" style="height: 80px; font-size: 2.5rem;">
+                    <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>CN: TCP/IP Model</h3>
+                    <div style="margin: 1rem 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <a href="https://youtube.com" target="_blank" class="resource-link"><i
+                                class="fa-brands fa-youtube" style="color: #ff0000; font-size: 1.2rem;"></i> Watch
+                            Lecture</a>
+                        <a href="#" class="resource-link"><i class="fa-solid fa-file-pdf"
+                                style="color: var(--primary-navy); font-size: 1.2rem;"></i> Download Notes</a>
+                        <a href="#" class="resource-link"><i class="fa-solid fa-file-circle-question"
+                                style="color: var(--primary-green); font-size: 1.2rem;"></i> View PYQs</a>
+                    </div>
+                    <button class="btn btn-done" data-topic="CN: TCP/IP Model" style="width: 100%; margin-top: auto;">I
+                        am Done</button>
+                </div>
+            </div>
+
+            <div class="resource-card">
+                <div class="resource-icon" style="height: 80px; font-size: 2.5rem;">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="resource-content">
+                    <h3>DBMS: Normalization</h3>
+                    <div style="margin: 1rem 0; display: flex; flex-direction: column; gap: 0.8rem;">
+                        <a href="https://youtube.com" target="_blank" class="resource-link"><i
+                                class="fa-brands fa-youtube" style="color: #ff0000; font-size: 1.2rem;"></i> Watch
+                            Lecture</a>
+                        <a href="#" class="resource-link"><i class="fa-solid fa-file-pdf"
+                                style="color: var(--primary-navy); font-size: 1.2rem;"></i> Download Notes</a>
+                        <a href="#" class="resource-link"><i class="fa-solid fa-file-circle-question"
+                                style="color: var(--primary-green); font-size: 1.2rem;"></i> View PYQs</a>
+                    </div>
+                    <button class="btn btn-done" data-topic="DBMS: Normalization"
+                        style="width: 100%; margin-top: auto;">I am Done</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

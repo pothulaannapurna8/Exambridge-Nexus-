@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamBridge - Sign In</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-container {
+            min-height: calc(100vh - 70px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary-navy) 0%, var(--secondary-navy) 100%);
+            padding: 2rem;
+        }
+
+        .auth-card {
+            background: var(--bg-white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            padding: 3rem;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .auth-logo {
+            margin-bottom: 2rem;
+            display: inline-block;
+        }
+
+        .auth-logo img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .auth-card h2 {
+            color: var(--primary-navy);
+            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+        }
+
+        .auth-card p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .auth-form .form-group {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        .auth-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--secondary-navy);
+            font-size: 0.9rem;
+        }
+
+        .auth-form .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .auth-form .form-control:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+        }
+
+        .btn-full {
+            width: 100%;
+            display: block;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            padding: 0.8rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="1000053634.png" alt="ExamBridge Logo" style="height: 85px;">
+        </a>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-logo">
+                <img src="1000053634.png" alt="ExamBridge Logo">
+            </div>
+            <h2>Welcome to ExamBridge Nexus</h2>
+            <p>Sign in to access your dashboard and resources</p>
+
+            <form id="signin-form" class="auth-form">
+                <div class="form-group">
+                    <label for="signin-name">Full Name</label>
+                    <input type="text" id="signin-name" name="signin-name" class="form-control"
+                        placeholder="e.g. SUNKAVALLI CHARAN RAM" required>
+                </div>
+                <div class="form-group">
+                    <label for="signin-email">Email Address</label>
+                    <input type="email" id="signin-email" name="signin-email" class="form-control"
+                        placeholder="Enter your email" required>
+                </div>
+                <div class="form-group" style="position: relative;">
+                    <label for="signin-phone">Phone Number</label>
+                    <input type="tel" id="signin-phone" name="signin-phone" class="form-control"
+                        placeholder="e.g. 7893140112" maxlength="10" pattern="[0-9]{10}"
+                        oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                    <i id="phone-feedback" class="fa-solid fa-check"
+                        style="position: absolute; right: 15px; top: 40px; color: var(--primary-green); display: none;"></i>
+                </div>
+                <button type="submit" class="btn btn-full">Sign In</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

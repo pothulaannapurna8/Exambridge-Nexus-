@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamBridge - Upload</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="1000053634.png" alt="ExamBridge Logo" style="height: 85px;">
+        </a>
+        <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="logout-item"><a href="signin.html" class="btn btn-outline logout-btn"
+                    style="padding: 0.4rem 1rem; margin-top: -0.4rem;">Login</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="section-header">
+            <h2>Upload Documents</h2>
+            <p>Upload your college syllabus pdf</p>
+        </div>
+
+        <div class="upload-card">
+            <form action="results.html" method="GET">
+                <div class="form-group">
+                    <label for="category">Document Category</label>
+                    <select id="category" name="category" class="form-control" required>
+                        <option value="" disabled selected>Select a category...</option>
+                        <option value="syllabus">Syllabus</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject / Course</label>
+                    <input type="text" id="subject" name="subject" class="form-control"
+                        placeholder="e.g. Computer Science 101" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Upload File</label>
+                    <div class="file-upload-wrapper">
+                        <input type="file" id="exam-file" name="exam-file" accept=".pdf,.doc,.docx,.png,.jpg" required>
+                        <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                        <h4 style="color:var(--secondary-navy)">Choose a file or drag it here</h4>
+                        <p class="file-name-display" id="file-name">Supports PDF, DOCX, JPG, PNG up to 10MB</p>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">Upload Document</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

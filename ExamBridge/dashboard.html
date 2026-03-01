@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExamBridge - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="1000053634.png" alt="ExamBridge Logo" style="height: 85px;">
+        </a>
+        <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="results.html">Results</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="logout-item"><a href="signin.html" class="btn btn-outline logout-btn"
+                    style="padding: 0.4rem 1rem; margin-top: -0.4rem;">Login</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="profile-header"
+            style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; background: var(--bg-white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
+            <div class="profile-image"
+                style="width: 80px; height: 80px; border-radius: 50%; background-color: var(--primary-green); color: white; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; font-weight: bold;">
+                <span id="profile-initial">S</span>
+            </div>
+            <div class="profile-info">
+                <h2 id="profile-name" style="color: var(--primary-navy); margin-bottom: 0.2rem;">SUNKAVALLI CHARAN RAM
+                </h2>
+                <p id="profile-phone" style="color: #666; font-size: 1.1rem;">+917893140112</p>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-file-arrow-up"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>24</h3>
+                    <p>Total Uploads</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-spinner"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>5</h3>
+                    <p>Pending Reviews</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-check-double"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>18</h3>
+                    <p>Evaluated Items</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+                <div class="stat-details">
+                    <h3>7</h3>
+                    <p>Day Streak</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard-panel" style="margin-bottom: 2rem;">
+            <ul class="activity-list">
+                <li class="activity-item"
+                    style="cursor: pointer; display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #eee;">
+                    <div style="color: var(--primary-navy); font-size: 1.2rem;"><i
+                            class="fa-solid fa-chevron-right"></i></div>
+                    <div class="activity-text">
+                        <p style="font-size: 1.1rem; color: var(--text-dark);"><strong>Profile Information</strong></p>
+                    </div>
+                </li>
+                <li class="activity-item"
+                    style="cursor: pointer; display: flex; align-items: center; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid #eee;">
+                    <div style="color: var(--primary-navy); font-size: 1.2rem;"><i
+                            class="fa-solid fa-circle-question"></i></div>
+                    <div class="activity-text">
+                        <p style="font-size: 1.1rem; color: var(--text-dark);"><strong>Help</strong></p>
+                    </div>
+                </li>
+                <li id="delete-account-btn" class="activity-item"
+                    style="cursor: pointer; display: flex; align-items: center; gap: 1rem; padding: 1rem 0;">
+                    <div style="color: #e74c3c; font-size: 1.2rem;"><i class="fa-solid fa-trash"></i></div>
+                    <div class="activity-text">
+                        <p style="font-size: 1.1rem; color: #e74c3c;"><strong>Delete My Account</strong></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="dashboard-panel">
+                <h3>Recent Activity</h3>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-dot"></div>
+                        <div class="activity-text">
+                            <p><strong>You</strong> uploaded a new document "CS101 Midterm Notes"</p>
+                            <small>2 hours ago</small>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-dot" style="background-color: var(--priority-medium-text)"></div>
+                        <div class="activity-text">
+                            <p><strong>System</strong> marked "Physics Lab Report" as Evaluated</p>
+                            <small>Yesterday at 4:30 PM</small>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-dot"></div>
+                        <div class="activity-text">
+                            <p><strong>You</strong> accessed resource "Past Paper Archive"</p>
+                            <small>Oct 14, 2023</small>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-dot" style="background-color: var(--priority-high-text)"></div>
+                        <div class="activity-text">
+                            <p><strong>Reminder</strong> Final Project submission due in 3 days</p>
+                            <small>Oct 12, 2023</small>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="dashboard-panel">
+                <h3>Completed Topics</h3>
+                <ul class="activity-list" id="completed-topics-list">
+                    <li class="activity-item" style="color: #666; font-style: italic;">No topics completed yet. Go to
+                        Resources to mark them done.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dashboard-content" style="margin-top: 1.5rem;">
+            <div class="dashboard-panel">
+                <h3>Progress Overview</h3>
+                <div style="height: 300px; display: flex; justify-content: center;">
+                    <canvas id="donutChart"></canvas>
+                </div>
+            </div>
+            <div class="dashboard-panel">
+                <h3>Weekly Activity</h3>
+                <div style="height: 300px;">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
